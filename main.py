@@ -3,20 +3,32 @@ while nombre == "":
     print("ERROR: El nombre no puede estar vacío.")
     nombre = input("Ingrese nombre del estudiante: ")
 
-c1 = float(input("Ingrese la calificación 1: "))
-while c1 < 0 or c1 > 100:
-    print("ERROR: La calificación debe estar entre 0 y 100.")
-    c1 = float(input("Ingrese nuevamente la calificación 1: "))
+while True:
+    try:
+        c1 = float(input("Ingrese la calificación 1: "))
+        if c1 >= 0 and c1 <= 100:
+            break
+        print("ERROR: La calificación debe estar entre 0 y 100.")
+    except ValueError:
+        print("ERROR: Debe ingresar un número.")
 
-c2 = float(input("Ingrese la calificación 2: "))
-while c2 < 0 or c2 > 100:
-    print("ERROR: La calificación debe estar entre 0 y 100.")
-    c2 = float(input("Ingrese nuevamente la calificación 2: "))
+while True:
+    try:
+        c2 = float(input("Ingrese la calificación 2: "))
+        if c2 >= 0 and c2 <= 100:
+            break
+        print("ERROR: La calificación debe estar entre 0 y 100.")
+    except ValueError:
+        print("ERROR: Debe ingresar un número.")
 
-c3 = float(input("Ingrese la calificación 3: "))
-while c3 < 0 or c3 > 100:
-    print("ERROR: La calificación debe estar entre 0 y 100.")
-    c3 = float(input("Ingrese nuevamente la calificación 3: "))
+while True:
+    try:
+        c3 = float(input("Ingrese la calificación 3: "))
+        if c3 >= 0 and c3 <= 100:
+            break
+        print("ERROR: La calificación debe estar entre 0 y 100.")
+    except ValueError:
+        print("ERROR: Debe ingresar un número.")
 
 promedio = (c1 + c2 + c3) / 3
 
